@@ -49,3 +49,7 @@ function deleteRecord(event){
     event.target.parentElement.parentElement.remove();
 }
 
+// TestingLibraryElementError: Unable to find an 
+// element with the text: /10001|10,001/. 
+// This could be because the text is broken up by multiple elements. 
+// In this case, you can provide a function for your text matcher to make your matcher more flexible.
