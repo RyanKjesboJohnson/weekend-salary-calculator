@@ -32,8 +32,7 @@ function handleSubmit(event){
   </tr>`
 
 totalSalary += Number(annualSalary);
-console.log(totalSalary);
-total-monthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`
+totalMonthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`
 
 // document.getElementById('total-monthly').textContent = Number(totalSalary);
 
