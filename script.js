@@ -32,7 +32,10 @@ function handleSubmit(event){
   </tr>`
 
 totalSalary += Number(annualSalary);
-totalMonthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`
+if(totalSalary > 25000){
+totalMonthly.innerHTML = `<p class='over-budget'>Total Monthly: ${totalSalary}</p>`;}
+ else {totalMonthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`};
+
 
 // document.getElementById('total-monthly').textContent = Number(totalSalary);
 

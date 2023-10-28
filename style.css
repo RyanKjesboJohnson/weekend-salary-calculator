@@ -37,3 +37,7 @@ table, th, td {
     margin-right: 40%;
     ;
 }
+
+.over-budget{
+    color: red;
+}
