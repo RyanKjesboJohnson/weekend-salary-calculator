@@ -31,10 +31,11 @@ function handleSubmit(event){
     <th><button onclick="deleteRecord(event)">␡</button></th>
   </tr>`
 
-let totalAnnualSalary = document.getElementById('total-monthly').textContent;
-totalSalary = Number(totalAnnualSalary) + Number(annualSalary);
+totalSalary += Number(annualSalary);
 console.log(totalSalary);
-document.getElementById('total-monthly').textContent = totalSalary;
+total-monthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`
+
+// document.getElementById('total-monthly').textContent = Number(totalSalary);
 
 
   document.getElementById('first-Name').value = '';
