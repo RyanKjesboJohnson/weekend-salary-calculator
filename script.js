@@ -52,7 +52,7 @@ function handleSubmit(event){
 function deleteRecord(event){
     // let removedRow = event.target.parentNode.parentNode.id;
     // console.log(removedRow);
-    // let rowData = document.getElementById(removedRow);
+    // let rowData = removedRow.querySelectorAll('AnnualSalaryInput');
     // console.log(rowData);
     event.target.parentElement.parentElement.remove();
 }
