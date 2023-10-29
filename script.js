@@ -32,7 +32,7 @@ function handleSubmit(event){
   </tr>`
 
 // console.log(document.getElementById('monthly-total').innerHTML);
-totalSalary += Number(annualSalary);
+totalSalary += Number(annualSalary)/12;
 if(totalSalary > 20000){
 monthlytotal.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`;
 document.getElementById('footer').classList.add('over-budget')}
