@@ -31,13 +31,11 @@ function handleSubmit(event){
     <th><button onclick="deleteRecord(event)">␡</button></th>
   </tr>`
 
+// console.log(document.getElementById('monthly-total').innerHTML);
 totalSalary += Number(annualSalary);
-if(totalSalary > 25000){
-totalMonthly.innerHTML = `<p class='over-budget'>Total Monthly: ${totalSalary}</p>`;}
- else {totalMonthly.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`};
-
-
-// document.getElementById('total-monthly').textContent = Number(totalSalary);
+if(totalSalary > 20000){
+monthlytotal.innerHTML = `<p class='over-budget'>Total Monthly: ${totalSalary}</p>`}
+ else {monthlytotal.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`};
 
 
   document.getElementById('first-Name').value = '';
