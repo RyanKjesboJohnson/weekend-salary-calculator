@@ -28,17 +28,19 @@ function handleSubmit(event){
     <th>${identification}</th>
     <th>${title}</th>
     <th>${annualSalary}</th>
-    <th><button onclick="deleteRecord(event)">␡</button></th>
+    <th><button onclick="deleteRecord(event)">❌</button></th>
   </tr>`
 
-// console.log(document.getElementById('monthly-total').innerHTML);
-totalSalary += Number(annualSalary)/12;
-if(totalSalary > 20000){
-monthlytotal.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`;
-document.getElementById('footer').classList.add('over-budget')}
- else {monthlytotal.innerHTML = `<p>Total Monthly: ${totalSalary}</p>`};
+  //Addition of the rows monthly salary from the total happens here,
+  //also this is where we push in the footer class if over budget.
+    totalSalary += annualSalary/12;
+    console.log("value before round:", totalSalary);
+    if(totalSalary > 20000){
+        document.getElementById('monthlytotal').textContent = Math.round(totalSalary);
+        document.getElementById('footer').classList.add('over-budget')}
+    else {document.getElementById('monthlytotal').textContent = Math.round(totalSalary)};
 
-
+//Remove the values from the total monthly count
   document.getElementById('first-Name').value = '';
   document.getElementById('last-Name').value = '';
   document.getElementById('identification-input').value = '';
@@ -46,12 +48,8 @@ document.getElementById('footer').classList.add('over-budget')}
   document.getElementById('annualSalary-input').value = '';
   
 }
-
+//function used to delete a row when clicking the button
 function deleteRecord(event){
+    console.log(event.target.parentElement.parentElement.value);
     event.target.parentElement.parentElement.remove();
 }
-
-// TestingLibraryElementError: Unable to find an 
-// element with the text: /10001|10,001/. 
-// This could be because the text is broken up by multiple elements. 
-// In this case, you can provide a function for your text matcher to make your matcher more flexible.

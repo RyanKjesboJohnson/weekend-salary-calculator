@@ -1,4 +1,4 @@
-/* Page Wide Formatting */
+/* Page Formatting */
 h1{
     background-color: #c38d98;
 }
@@ -13,13 +13,14 @@ h2 {
     background-color: #E27D60;
     width: 30%;
     border-radius: 25px;
-    margin-left: 20%;
+    margin-left: 35%;
     margin-right: 20%;
 }
 
 /* Table Formatting  */
 table{
     width: 75%;
+    margin-left: 10%;
 }
 table, th, td {
     border: 1px solid white;
@@ -27,7 +28,7 @@ table, th, td {
 }
 
 /* Footer Formatting */
-.total-salary-section{
+footer{
     border: white;
     border-width: 1px;
     border-radius: 1px;
@@ -35,6 +36,7 @@ table, th, td {
     text-align: center;
     margin-left: 40%;
     margin-right: 40%;
+    margin-top: 5%;
     ;
 }
 
