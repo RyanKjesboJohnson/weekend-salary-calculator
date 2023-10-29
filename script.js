@@ -22,12 +22,12 @@ function handleSubmit(event){
    
     //input of table item for employee record
     tableBody.innerHTML += 
-    `<tr>
+    `<tr id='${identification}'>
     <th>${firstName}</th>
     <th>${lastName}</th>
     <th>${identification}</th>
     <th>${title}</th>
-    <th>${annualSalary}</th>
+    <th id='AnnualSalaryInput'>${annualSalary}</th>
     <th><button onclick="deleteRecord(event)">❌</button></th>
   </tr>`
 
@@ -50,6 +50,9 @@ function handleSubmit(event){
 }
 //function used to delete a row when clicking the button
 function deleteRecord(event){
-    console.log(event.target.parentElement.parentElement.value);
+    // let removedRow = event.target.parentNode.parentNode.id;
+    // console.log(removedRow);
+    // let rowData = document.getElementById(removedRow);
+    // console.log(rowData);
     event.target.parentElement.parentElement.remove();
 }
